@@ -11,9 +11,13 @@
      xmlns:locn="http://www.w3.org/ns/locn#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:streetlight="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight">
         <ns:license>https://creativecommons.org/licenses/by/4.0/</ns:license>
+        <rdfs:comment xml:lang="es">Ontología utilizada para representar farolas y sus posiciones geográficas. Se busca concentrar la información de distintas fuentes dentro de una fuente concensuada.</rdfs:comment>
+        <rdfs:label xml:lang="es">Ontología Farolas</rdfs:label>
     </owl:Ontology>
     
 
@@ -426,6 +430,71 @@ Note: Publishers should be aware that applications designed to use specific sche
     
 
 
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#height -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#height">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Streetlight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#is_functional -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#is_functional">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#lamp_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#lamp_type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#light_power -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#light_power">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#light_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#light_type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#num_of_circuits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#num_of_circuits">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Streetlight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#streetlight_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#streetlight_type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Streetlight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
@@ -773,10 +842,31 @@ Always use specific schema.org properties when a) they exist and b) you can popu
     
 
 
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb"/>
+        <is_functional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_functional>
+        <lamp_type>VSAP</lamp_type>
+        <light_power rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</light_power>
+        <light_type>AC</light_type>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Madrid -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Madrid">
         <rdf:type rdf:resource="http://rdfs.co/juso/City"/>
+        <juso:parent rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Spain"/>
     </owl:NamedIndividual>
     
 
@@ -785,6 +875,18 @@ Always use specific schema.org properties when a) they exist and b) you can popu
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Point1">
         <rdf:type rdf:resource="http://rdfs.co/juso/Point"/>
+        <juso:wgs84_lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.47100814754225</juso:wgs84_lat>
+        <juso:wgs84_long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-6.391375417575946</juso:wgs84_long>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Point2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Point2">
+        <rdf:type rdf:resource="http://rdfs.co/juso/Point"/>
+        <juso:wgs84_lat xml:lang="es">39.47211329719991</juso:wgs84_lat>
+        <juso:wgs84_long xml:lang="es">-6.393323332315313</juso:wgs84_long>
     </owl:NamedIndividual>
     
 
@@ -793,6 +895,8 @@ Always use specific schema.org properties when a) they exist and b) you can popu
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Spain">
         <rdf:type rdf:resource="http://rdfs.co/juso/Country"/>
+        <schema:name xml:lang="es">España</schema:name>
+        <schema:name xml:lang="en">Spain</schema:name>
     </owl:NamedIndividual>
     
 
@@ -803,6 +907,23 @@ Always use specific schema.org properties when a) they exist and b) you can popu
         <rdf:type rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Streetlight"/>
         <juso:parent rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Madrid"/>
         <locn:geometry rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Point1"/>
+        <height xml:lang="es">30</height>
+        <is_functional xml:lang="es">true</is_functional>
+        <streetlight_type xml:lang="es">Vial</streetlight_type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#StreetLight2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#StreetLight2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Streetlight"/>
+        <juso:parent rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#Madrid"/>
+        <has_light_bulb rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#LightBulb2"/>
+        <is_next_to rdf:resource="http://www.semanticweb.org/federuiz/ontologies/2020/10/streetlight#StreetLight1"/>
+        <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</height>
+        <num_of_circuits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</num_of_circuits>
+        <streetlight_type>Acera</streetlight_type>
     </owl:NamedIndividual>
     
 
